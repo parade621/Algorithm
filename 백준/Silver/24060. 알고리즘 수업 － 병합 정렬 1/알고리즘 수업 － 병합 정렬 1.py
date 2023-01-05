@@ -1,40 +1,40 @@
-def merge_sort(L):
-    if len(L) == 1:
-        return L
+def merge_sort(a):
+    if len(a) == 1:
+        return a
     
-    mid = (len(L)+1)//2
-   
-    left = merge_sort(L[:mid])
-    right = merge_sort(L[mid:])
-    
-    i,j = 0,0
-    L2 = []
-    while i < len(left) and j < len(right):
-        if left[i] < right[j]:
-            L2.append(left[i])
-            ans.append(left[i])
+    mid = (len(a)+1)//2
+
+    l = merge_sort(a[:mid])
+    r = merge_sort(a[mid:])
+
+    i, j = 0, 0
+    tmp = []
+    while i< len(l) and j < len(r):
+        if l[i] < r[j]:
+            tmp.append(l[i])
+            result.append(l[i])
             i+=1
         else:
-            L2.append(right[j])
-            ans.append(right[j])
+            tmp.append(r[j])
+            result.append(r[j])
             j+=1
-    while i < len(left):
-        L2.append(left[i])
-        ans.append(left[i])
+    while i < len(l):
+        tmp.append(l[i])
+        result.append(l[i])
         i+=1
-    while j < len(right):
-        L2.append(right[j])
-        ans.append(right[j])
+    while j < len(r):
+        tmp.append(r[j])
+        result.append(r[j])
         j+=1
     
-    return L2
+    return tmp
+        
+n, k = map(int, input().split())
+s = list(map(int,input().split()))
+result=[]
+merge_sort(s)
 
-n, k = map(int,input().split())
-a = list(map(int,input().split()))
-ans = []
-merge_sort(a)
-
-if len(ans) >= k:
-    print(ans[k-1])
+if len(result) >= k:
+    print(result[k-1])
 else:
     print(-1)
