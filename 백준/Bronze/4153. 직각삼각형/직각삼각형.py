@@ -1,10 +1,9 @@
 while True:
     s = list(map(int, input().split()))
-    if sum(s) == 0:
+    if s.count(0) == 3:
         break
-    n = max(s)
-    s.remove(n)
-    if s[0]**2 + s[1]**2 == n**2:
+    s.sort()
+    if s[0]**2 + s[1]**2 == s[2]**2:
         print("right")
     else:
         print("wrong")
