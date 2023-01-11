@@ -1,5 +1,5 @@
 s = input().upper()
-d = dict.fromkeys(tuple(s),0)
+d = dict.fromkeys(s,0)
 for i in s:
     d[i] +=1
 tmp = max(d.values())
