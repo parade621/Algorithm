@@ -1,13 +1,13 @@
-from itertools import permutations as p
-n,m = map(int,input().split())
-a=[i for i in range(1,n+1)]
-a=p(a,m)
+n,m=map(int,input().split())
 s=[]
-for i in a:
-    t = sorted(list(i))
-    if t in s:
-        pass
-    else:
-        s.append(sorted(list(i)))
-for i in s:
-    print(*i)
+r=[]
+def dfs(tmp):
+    if len(s)==m:
+        print(' '.join(map(str,s)))
+        return
+    for i in range(tmp,n+1):
+        if i not in s:
+            s.append(i)
+            dfs(i+1)
+            s.pop()
+dfs(1)
