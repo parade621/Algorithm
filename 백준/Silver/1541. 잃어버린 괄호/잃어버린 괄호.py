@@ -1,12 +1,8 @@
 s=input().split('-')
 n=[]
 for i in s:
-    cnt=0
-    a=i.split('+')
-    for j in a:
-        cnt += int(j)
-    n.append(cnt)
+    a=list(map(int, i.split('+')))
+    n.append(sum(a))
 result = n[0]
-for i in range(1,len(n)):
-    result -= n[i]
+result -= sum(n[1:len(n)])
 print(result)
