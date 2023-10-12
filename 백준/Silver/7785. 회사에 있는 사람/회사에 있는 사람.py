@@ -1,10 +1,13 @@
-d={}
-for i in range(int(input())):
-    a,b=map(str,input().split())
-    if(b=="leave"):
-        del(d[a])
+n = int(input())
+names = set()
+
+for _ in range(n):
+    name, action = input().split()
+    
+    if action == "enter":
+        names.add(name)
     else:
-        d[a]=b
-d=reversed(sorted(d))
-for i in d:
-    print(i)
+        names.remove(name)
+
+for name in sorted(names, reverse=True):
+    print(name)
