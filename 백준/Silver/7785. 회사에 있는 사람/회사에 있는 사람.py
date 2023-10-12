@@ -1,8 +1,10 @@
-n = int(input())
+import sys
+
+n = int(sys.stdin.readline())
 names = set()
 
 for _ in range(n):
-    name, action = input().split()
+    name, action = sys.stdin.readline().split()
     
     if action == "enter":
         names.add(name)
