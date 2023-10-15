@@ -1,10 +1,6 @@
 import sys
-from collections import deque
 input = sys.stdin.readline
 n = int(input())
-l=deque()
-d=deque()
-r=deque()
 l = [int(input()) for _ in range(n)]
 d = [l[i+1] - l[i] for i in range(n-1)]
 def gcd(a, b):
