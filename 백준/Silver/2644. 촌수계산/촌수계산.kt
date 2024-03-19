@@ -2,12 +2,10 @@ fun main() {
     val n = readln().toInt()
     val (x, y) = readln().split(" ").map { it.toInt() }
     val m = readln().toInt()
-    val arr: ArrayList<ArrayList<Int>> = ArrayList(n)
-    for (i in 0 until n) {
-        val row = ArrayList<Int>(n)
-        for (j in 0 until n) row.add(0)
-        arr.add(row)
-    }
+
+    // 2차원 ArrayList를 초기화하는 더 간단한 방법
+    val arr = List(n) { MutableList(n) { 0 } }
+
     val visited = MutableList(n) { false }
     repeat(m) {
         val (a, b) = readln().split(" ").map { it.toInt() - 1 }
@@ -17,18 +15,20 @@ fun main() {
 
     var result = -1
 
-    fun dfs(graph: ArrayList<ArrayList<Int>>, index: Int, visited: MutableList<Boolean>, cnt: Int) {
+    fun dfs(index: Int, cnt: Int) {
+        if (visited[index]) return
         visited[index] = true
-        if (index + 1 == y) {
+        if (index == y - 1) {
             result = cnt
             return
         }
-        for (i in 0 until graph[index].size) {
-            if (graph[index][i] == 1 && !visited[i]) {
-                dfs(graph, i, visited, cnt + 1)
+        for (i in 0 until n) {
+            if (arr[index][i] == 1 && !visited[i]) {
+                dfs(i, cnt + 1)
             }
         }
     }
-    dfs(arr, x - 1, visited, 0)
+    
+    dfs(x - 1, 0)
     println(result)
 }
