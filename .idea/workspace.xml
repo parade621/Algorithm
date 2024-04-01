@@ -16,7 +16,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51fbb4de-b89d-4bf4-b5d2-12de6178ccf0" name="Changes" comment="" />
+    <list default="true" id="51fbb4de-b89d-4bf4-b5d2-12de6178ccf0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,9 +95,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/molrhmbo/Study/Algorithm",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
@@ -105,7 +107,7 @@
       <recent name="$PROJECT_DIR$/app/src/main/java/com/example/algorithm/beakjoon" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin._2178Kt">
+  <component name="RunManager" selected="Android App.app">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="Algorithm.app.main" />
       <option name="DEPLOY" value="true" />
@@ -194,13 +196,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_2178Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.algorithm.beakjoon._2178Kt" />
-      <module name="Algorithm.app.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="_2644Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.algorithm.beakjoon._2644Kt" />
       <module name="Algorithm.app.main" />
@@ -210,7 +205,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin._2178Kt" />
         <item itemvalue="Kotlin.연속된부분수열의합Kt" />
         <item itemvalue="Kotlin._2644Kt" />
         <item itemvalue="Kotlin._1260Kt" />
